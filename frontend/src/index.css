@@ -1,4 +1,3 @@
-/* Wrapper */
 .container {
   max-width: 600px;
   margin: 20px auto;
@@ -8,7 +7,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -31,7 +29,6 @@ select:focus {
   outline: none;
 }
 
-/* Buttons */
 button {
   padding: 10px;
   border: none;
@@ -46,7 +43,6 @@ button:hover {
   background: #0056b3;
 }
 
-/* Todo Item */
 .todo-item {
   border: 1px solid #ddd;
   padding: 15px;
@@ -78,7 +74,7 @@ button.delete:hover {
   background: #b52b27;
 }
 
-/* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
+}
