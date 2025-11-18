@@ -1,0 +1,84 @@
+/* Wrapper */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Todo Item */
+.todo-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+
+.todo-item h3 {
+  margin: 0;
+  color: #222;
+}
+
+.todo-item p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.todo-item .actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+button.delete {
+  background: #d9534f;
+}
+button.delete:hover {
+  background: #b52b27;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;

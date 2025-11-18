@@ -29,7 +29,7 @@ const TodoList = () => {
     };
 
     return (
-        <div>
+        <div className="container">
             <h1>Todo List</h1>
             <TodoForm fetchTodos={fetchTodos} todoToEdit={todoToEdit} setTodoToEdit={setTodoToEdit} />
             {loading ? <p>Loading...</p> : todos.map(todo => <TodoItem key={todo._id} todo={todo} fetchTodos={fetchTodos} setTodoToEdit={setTodoToEdit} />)}

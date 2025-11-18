@@ -8,12 +8,15 @@ const TodoItem = ({ todo, fetchTodos, setTodoToEdit }) => {
     };
 
     return (
-        <div style={{ border: '1px solid #ccc', margin: '5px', padding: '10px' }}>
+        <div className="todo-item">
             <h3>{todo.title}</h3>
             <p>{todo.discription}</p>
             <p>Status: {todo.status}</p>
+
+            <div className="actions">
             <button onClick={() => setTodoToEdit(todo)}>Edit</button>
             <button onClick={handleDelete}>Delete</button>
+            </div>
         </div>
     );
 };
