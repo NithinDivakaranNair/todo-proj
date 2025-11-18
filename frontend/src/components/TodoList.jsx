@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import api from '../api.js';
 import TodoItem from './TodoItem';
 import TodoForm from './TodoForm';
-import ReactPaginate from 'react-paginate';
 
 const TodoList = () => {
     const [todos, setTodos] = useState([]);
