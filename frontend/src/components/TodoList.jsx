@@ -14,7 +14,7 @@ const TodoList = () => {
         setLoading(true);
         const res = await api.get(`/todos?page=${pageNumber}&limit=5`);
         setTodos(res.data.todos);
-        setPages(res.data.pages);
+        setPages(res.data.totalPages);
         setPage(res.data.page - 1);
         setLoading(false);
     };
@@ -29,31 +29,22 @@ const TodoList = () => {
 
     return (
         <div className="container">
+
             <h1>Todo List</h1>
             <TodoForm fetchTodos={fetchTodos} todoToEdit={todoToEdit} setTodoToEdit={setTodoToEdit} />
             {loading ? <p>Loading...</p> : todos.map(todo => <TodoItem key={todo._id} todo={todo} fetchTodos={fetchTodos} setTodoToEdit={setTodoToEdit} />)}
      
      
-     <div style={{ marginTop: "20px", display: "flex", gap: "10px" }}>
-    <button
-        disabled={page + 1 === 1}
-        onClick={() => fetchTodos(page)}
-    >
-        Prev
-    </button>
+            <div style={{ marginTop: "10px", display: "flex", gap: "30px" }}>
+
+    <button disabled={page + 1 === 1} onClick={() => fetchTodos(page)}> Prev </button>
 
     <span>Page {page + 1} of {pages}</span>
 
-    <button
-        disabled={page + 1 === pages}
-        onClick={() => fetchTodos(page + 2)}
-    >
-        Next
-    </button>
-</div>
+    <button disabled={page + 1 === pages} onClick={() => fetchTodos(page + 2)} > Next </button>
+                </div>
 
-
-        </div>
+          </div>
     );
 };
 
